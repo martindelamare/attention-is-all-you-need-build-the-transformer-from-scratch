@@ -89,7 +89,3 @@ python scaffold.py
 - [ ] **78.** append_tokens_to_beam_sequences
 - [ ] **79.** mark_finished_beams
 - [ ] **80.** select_best_finished_beam
-
----
-
-Built on Deep-ML.
