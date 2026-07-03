@@ -15,7 +15,7 @@ python scaffold.py
 - [x] **3.** encode_sentence_to_ids
 - [x] **4.** decode_ids_to_tokens
 - [x] **5.** pad_id_sequence
-- [ ] **6.** stack_padded_sequences_to_batch
+- [x] **6.** stack_padded_sequences_to_batch
 - [ ] **7.** scale_embeddings_by_sqrt_d_model
 - [ ] **8.** compute_positional_div_term
 - [ ] **9.** build_position_index_column
@@ -89,3 +89,7 @@ python scaffold.py
 - [ ] **78.** append_tokens_to_beam_sequences
 - [ ] **79.** mark_finished_beams
 - [ ] **80.** select_best_finished_beam
+
+---
+
+Built on Deep-ML.
