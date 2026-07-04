@@ -109,8 +109,12 @@ def fill_even_indices_with_sin(pe, position, div_term):
             pe[k][2*i] = torch.sin(position[k] * div_term[i])
     return pe
 
-# Step 11 - fill_odd_indices_with_cos (not yet solved)
-# TODO: implement
+# Step 11 - fill_odd_indices_with_cos
+import torch
+
+def fill_odd_indices_with_cos(pe, position, div_term):
+    pe[:, 1::2] = torch.cos(position * div_term)
+    return pe
 
 # Step 12 - build_sinusoidal_positional_encoding (not yet solved)
 # TODO: implement
