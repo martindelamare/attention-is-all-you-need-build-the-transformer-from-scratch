@@ -87,7 +87,7 @@ import math
 
 def compute_positional_div_term(d_model):
     i = torch.arange(0, d_model, 2, dtype=torch.float32)
-    return torch.exp(i * (-math.log(10000.0) / d_model))
+    return torch.exp(i * (-math.log(10000) / d_model))
 
 # Step 9 - build_position_index_column (not yet solved)
 # TODO: implement
