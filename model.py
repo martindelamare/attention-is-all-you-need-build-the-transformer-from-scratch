@@ -94,7 +94,9 @@ import torch
 
 def build_position_index_column(max_len):
     """Return a (max_len, 1) float tensor of [0, 1, ..., max_len-1]."""
-    return torch.tensor([[i] for i in range(max_len)], dtype=torch.float32)
+    i = torch.arange(max_len, dtype=torch.float32)
+    return torch.reshape(i, (max_len, 1))
+    #return torch.tensor([[i] for i in range(max_len)], dtype=torch.float32)
 
 # Step 10 - fill_even_indices_with_sin (not yet solved)
 # TODO: implement
