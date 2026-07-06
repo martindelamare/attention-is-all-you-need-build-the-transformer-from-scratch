@@ -146,14 +146,15 @@ import torch
 
 def build_causal_mask(seq_len):
     """Return a (1, 1, seq_len, seq_len) bool mask, True on and below diagonal."""
-    res = []
-    for i in range(seq_len):
-        tmp = []
-        for j in range(seq_len):
-            tmp.append(j <= i)
-        res.append(tmp)
-    mask = torch.tensor(res, dtype=torch.bool)
-    return torch.reshape(mask, (1, 1, seq_len, seq_len))
+    #res = []
+    #for i in range(seq_len):
+    #    tmp = []
+    #    for j in range(seq_len):
+    #        tmp.append(j <= i)
+    #    res.append(tmp)
+    #mask = torch.tensor(res, dtype=torch.bool)
+    #return torch.reshape(mask, (1, 1, seq_len, seq_len))
+    return torch.tril(torch.ones((seq_len, seq_len), dtype=torch.bool).reshape((1, 1, seq_len, seq_len)))
 
 # Step 16 - combine_padding_and_causal_masks (not yet solved)
 # TODO: implement
